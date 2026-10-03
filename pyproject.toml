@@ -1,0 +1,31 @@
+[project]
+name = "commute-split"
+version = "0.1.0"
+description = "Fareline, the MHacks 2026 carpool ledger that lives in the group chat."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.32",
+  "uagents==0.25.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "httpx>=0.27",
+]
+
+[project.scripts]
+commute-split = "commute_split.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/commute_split"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

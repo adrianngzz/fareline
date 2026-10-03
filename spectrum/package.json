@@ -1,0 +1,12 @@
+{
+  "name": "commute-split-spectrum",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test resolve.test.js"
+  },
+  "dependencies": {
+    "spectrum-ts": "^12.10.1"
+  }
+}
